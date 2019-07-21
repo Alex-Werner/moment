@@ -340,7 +340,7 @@
     hooks.deprecationHandler = null;
 
     function isFunction(input) {
-        return input instanceof Function || Object.prototype.toString.call(input) === '[object Function]';
+        return Function!==undefined && input instanceof Function || Object.prototype.toString.call(input) === '[object Function]';
     }
 
     function set (config) {
